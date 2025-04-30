@@ -208,7 +208,7 @@ const Checkout = () => {
                   <div className="space-y-2">
                     <Label htmlFor="state">State/Province*</Label>
                     <Select
-                      value={orderInfo.state}
+                      value={orderInfo.state || undefined}
                       onValueChange={(value) => handleSelectChange("state", value)}
                     >
                       <SelectTrigger>

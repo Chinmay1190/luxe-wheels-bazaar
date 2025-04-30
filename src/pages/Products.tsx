@@ -158,14 +158,14 @@ const Products = () => {
               <div>
                 <h3 className="font-medium mb-3">Brand</h3>
                 <Select
-                  value={selectedBrand || ""}
+                  value={selectedBrand || undefined}
                   onValueChange={(value) => setSelectedBrand(value || null)}
                 >
                   <SelectTrigger className="w-full">
                     <SelectValue placeholder="All Brands" />
                   </SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="">All Brands</SelectItem>
+                    <SelectItem value="all-brands">All Brands</SelectItem>
                     {brands.map((brand) => (
                       <SelectItem key={brand.id} value={brand.name}>
                         {brand.name}
@@ -179,14 +179,14 @@ const Products = () => {
               <div>
                 <h3 className="font-medium mb-3">Category</h3>
                 <Select
-                  value={selectedCategory || ""}
+                  value={selectedCategory || undefined}
                   onValueChange={(value) => setSelectedCategory(value || null)}
                 >
                   <SelectTrigger className="w-full">
                     <SelectValue placeholder="All Categories" />
                   </SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="">All Categories</SelectItem>
+                    <SelectItem value="all-categories">All Categories</SelectItem>
                     {categories.map((category) => (
                       <SelectItem key={category.id} value={category.name}>
                         {category.name}
